@@ -22,7 +22,7 @@ def generate_launch_description():
     params_file = os.path.join(
         bringup_dir,
         "config",
-        "nav2_params.yaml")
+        "params.yaml")
 
     launch_rviz = LaunchConfiguration("launch_rviz")
     launch_rviz_cmd = DeclareLaunchArgument(
@@ -33,15 +33,14 @@ def generate_launch_description():
     slam = LaunchConfiguration("slam")
     slam_cmd = DeclareLaunchArgument(
         "slam",
-        default_value="False",
+        default_value="True",
         description="Whether run a SLAM")
 
     map_yaml_file = LaunchConfiguration(
         "map",
         default=os.path.join(
-            bringup_dir,
-            "maps/apartamento_leon",
-            "apartamento_leon_gimp_con_mesa_tv.yaml"))
+            "/home/cataplau/RoboCup2023/MAPA/",
+            "arena_test2.yaml"))
     map_yaml_cmd = DeclareLaunchArgument(
         "map",
         default_value=map_yaml_file,

@@ -19,8 +19,8 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/gentlebots/ros2_ws/src/ros2_rb1/tiago_navigation/maps/apartamento_leon/apartamento_leon_gimp_con_mesa_tv
-    map_start_pose: [1.336, 6.544, 0.0]
+    # map_file_name: /home/cataplau/ros2_ws/src/tiago_navigation/tiago_navigation/maps/apartamento_leon/mapa_apartamento_2
+    # map_start_pose: [-4.8, 0.8, 1.56]
     map_start_at_dock: true
 
     debug_logging: false
@@ -29,7 +29,7 @@ slam_toolbox:
     map_update_interval: 5.0
     resolution: 0.05
     max_laser_range: 20.0 #for rastering images
-    minimum_time_interval: 0.5
+    minimum_time_interval: 0.1 # ANTES 0.5 este es el valor de los de Madrid
     transform_timeout: 0.2
     tf_buffer_duration: 30.
     stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
